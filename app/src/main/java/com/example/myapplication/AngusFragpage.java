@@ -7,13 +7,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class AngusFragpage extends AppCompatActivity implements View.OnClickListener {
+public class AngusFragpage extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
     Controllerdb db =new Controllerdb(this);
     SQLiteDatabase database;
     EditText Name,Mail,Age;
@@ -34,9 +35,23 @@ public class AngusFragpage extends AppCompatActivity implements View.OnClickList
             Showdatabtn.setOnClickListener(this);
             pre =findViewById(R.id.prebtn);
         home =findViewById(R.id.nextbtn);
+
+        spinner.setOnItemSelectedListener(this);
+        loadSpinnerData();
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
 //set the spinners adapter to the previously created one.
         spinner.setAdapter(adapter);
+
+        Submitdatabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+             //   https://www.javatpoint.com/android-sqlite-example-with-spinner
+            }
+        });
+
+
+
 
 
         pre.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +69,13 @@ public class AngusFragpage extends AppCompatActivity implements View.OnClickList
             }
         });
         }
+
+    private void loadSpinnerData() {
+
+
+
+    }
+
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Are you sure? This will delete all entries");
@@ -91,4 +113,14 @@ public class AngusFragpage extends AppCompatActivity implements View.OnClickList
 
             }
         }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
     }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+}

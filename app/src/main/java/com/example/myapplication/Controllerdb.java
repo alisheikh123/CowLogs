@@ -12,21 +12,20 @@ public class Controllerdb extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         //create table to insert data
-        String query,herefordquery;
-        query = "CREATE TABLE IF NOT EXISTS UserDetails(Id INTEGER PRIMARY KEY AUTOINCREMENT,Username VARCHAR,Mailid VARCHAR,Age VARCHAR);";
-        /*herefordquery = "CREATE TABLE IF NOT EXISTS hereuser(Id INTEGER PRIMARY KEY AUTOINCREMENT,Username VARCHAR,Mailid VARCHAR,Age VARCHAR);";*/
+        String query;
+        query = "CREATE TABLE IF NOT EXISTS UserDetails(Id INTEGER PRIMARY KEY AUTOINCREMENT,Username VARCHAR,Mailid VARCHAR,Age VARCHAR,condition VARCHAR,cudate INTEGER,longitunal INTEGER,latitude INTEGER);";
+
         db.execSQL(query);
-        /*db.execSQL(herefordquery);
-*/
+
 
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String query ,herefordquery;
         query = "DROP TABLE IF EXISTS UserDetails";
-        /*herefordquery = "DROP TABLE IF EXISTS hereuser";*/
+
         db.execSQL(query);
-        /*db.execSQL(herefordquery);*/
+
         onCreate(db);
     }
 }

@@ -16,7 +16,7 @@
 
 
             ></activity>
-        <activity android:name=".MainFragPage" />
+        <activity android:name=".Email" />
         <activity
             android:name=".ProfileShow"
             android:label="Profile Show"
@@ -49,7 +49,7 @@
             android:name=".HerefordFragpage"
             android:label="hereford" />
         <activity
-            android:name=".Email"
+            android:name=".MainFragPage"
             android:label="Dashboard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
