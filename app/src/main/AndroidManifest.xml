@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="CowLogs"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Location"
+
+
+            ></activity>
+        <activity android:name=".MainFragPage" />
+        <activity
+            android:name=".ProfileShow"
+            android:label="Profile Show"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ProfileFragment"
+            android:label="Profile" />
+        <activity
+            android:name=".ShowdataListview_Brangus"
+            android:label="ShowdataListview_Brangus" />
+        <activity
+            android:name=".BranghusFragpage"
+            android:label="Brangus" />
+        <activity
+            android:name=".ShowdataListview_Shorthan"
+            android:label="ShowdataListview_Shorthan" />
+        <activity
+            android:name=".ShorthanFragPage"
+            android:label="Shorthan" />
+        <activity
+            android:name=".ShowdataListviewBrahman"
+            android:label="ShowdataListviewBrahman" />
+        <activity
+            android:name=".BrahmanFragpage"
+            android:label="Brahman" />
+        <activity
+            android:name=".ShowdataListviewhereford"
+            android:label="ShowdataListviewhereford" />
+        <activity
+            android:name=".HerefordFragpage"
+            android:label="hereford" />
+        <activity
+            android:name=".Email"
+            android:label="Dashboard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ShowdataListview"
+            android:label="ShowdataListview" />
+        <activity
+            android:name=".AngusFragpage"
+            android:label="Angus" />
+    </application>
+
+</manifest>
