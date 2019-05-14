@@ -19,14 +19,20 @@ public class CustomAdapter extends BaseAdapter {
     private ArrayList<String> Name = new ArrayList<String>();
     private ArrayList<String> MailId = new ArrayList<String>();
     private ArrayList<String> Age = new ArrayList<String>();
+    private ArrayList<String> date = new ArrayList<String>();
+    private ArrayList<String> longitude = new ArrayList<String>();
+    private ArrayList<String> latitude = new ArrayList<String>();
     public CustomAdapter(Context  context,ArrayList<String> Id,ArrayList<String> Name, ArrayList<String> MailId,ArrayList<String> Age
-    )
+    ,ArrayList<String> date,ArrayList<String> longitude,ArrayList<String> latitude)
     {
         this.mContext = context;
         this.Id = Id;
         this.Name = Name;
         this.MailId = MailId;
         this.Age=Age;
+        this.date=date;
+        this.longitude =longitude;
+        this.latitude = latitude;
     }
     @Override
     public int getCount() {
@@ -53,6 +59,10 @@ public class CustomAdapter extends BaseAdapter {
             holder.name = (TextView) convertView.findViewById(R.id.tvname);
             holder.mail = (TextView) convertView.findViewById(R.id.tvmailid);
             holder.age = (TextView) convertView.findViewById(R.id.tvage);
+            holder.condition = (TextView) convertView.findViewById(R.id.tvcondition);
+            holder.date = (TextView) convertView.findViewById(R.id.tvdate);
+            holder.latitude = (TextView) convertView.findViewById(R.id.tvlatitude);
+            holder.longitude = (TextView) convertView.findViewById(R.id.tvlongitude);
             convertView.setTag(holder);
         } else {
             holder = (viewHolder) convertView.getTag();
@@ -64,6 +74,10 @@ public class CustomAdapter extends BaseAdapter {
         return convertView;
     }
     public class viewHolder {
+        public TextView longitude;
+        public TextView latitude;
+        public TextView date;
+        public TextView condition;
         TextView id;
         TextView name;
         TextView mail;

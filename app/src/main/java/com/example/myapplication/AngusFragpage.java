@@ -116,7 +116,7 @@ public class AngusFragpage extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+///https://www.javatpoint.com/android-sqlite-example-with-spinner
     }
 
     @Override

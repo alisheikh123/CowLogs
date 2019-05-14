@@ -33,5 +33,33 @@
 
         android:text="New Text"
         android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tvcondition"
+        android:layout_width="59dp"
+        android:layout_height="45dp"
+
+        android:text="New Text"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tvdate"
+        android:layout_width="59dp"
+        android:layout_height="45dp"
+
+        android:text="New Text"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tvlatitude"
+        android:layout_width="59dp"
+        android:layout_height="45dp"
+
+        android:text="New Text"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tvlongitude"
+        android:layout_width="59dp"
+        android:layout_height="45dp"
+
+        android:text="New Text"
+        android:textSize="20sp" />
 
 </LinearLayout>

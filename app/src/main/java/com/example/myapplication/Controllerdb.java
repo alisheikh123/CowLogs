@@ -21,7 +21,7 @@ public class Controllerdb extends SQLiteOpenHelper {
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String query ,herefordquery;
+        String query ;
         query = "DROP TABLE IF EXISTS UserDetails";
 
         db.execSQL(query);
